@@ -3,6 +3,9 @@ from disease import Disease, all_diseases
 import lib_gpt
 from symptoms import list_all_symptoms
 
+_token = os.getenv("TOKEN")
+_url = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
+_modelUri = "gpt://b1gnm0fvekn5a1q9r0lj/yandexgpt-lite"
 
 
 def find_key_by_symptom(symptom):

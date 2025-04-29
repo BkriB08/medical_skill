@@ -41,20 +41,7 @@ def get_promt (prompt_text ):
     except:
         return ""
 
-def get_token_sber():
 
-    url = "https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-
-    payload = 'scope=GIGACHAT_API_PERS'
-    
-    RqUID = str(uuid.uuid4())
-    
-    headers = {
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Accept': 'application/json',
-    'RqUID': RqUID,
-    'Authorization': 'Basic ZjZmMmRjNzctYTQ4Zi00NjIwLWE5MzEtMzBiNDJhNmIyMjFhOmI3MjljZTIzLTdlZjUtNGMwZS1hNzY0LTNlOWYyOTY3MjM0Yw=='
-    }
 
     response = requests.request("POST", url, headers=headers, data=payload, verify=False)
     
